@@ -1,0 +1,29 @@
+[2025-05-27T15:23:11.551+0000] {processor.py:157} INFO - Started process (PID=2475) to work on /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:11.552+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dags_example_dag.py for tasks to queue
+[2025-05-27T15:23:11.553+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:11.552+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:11.559+0000] {processor.py:839} INFO - DAG(s) dict_keys(['hello_world_dag']) retrieved from /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:11.647+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:11.646+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-05-27T15:23:11.654+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:11.653+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-05-27T15:23:11.658+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:11.658+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-05-27T15:23:11.659+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:11.659+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-27T15:23:11.667+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:11.666+0000] {dag.py:2963} INFO - Creating ORM DAG for hello_world_dag
+[2025-05-27T15:23:11.674+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:11.673+0000] {dag.py:3722} INFO - Setting next_dagrun for hello_world_dag to 2025-05-26T15:23:11.673699+00:00, run_after=2025-05-27T15:23:11.673699+00:00
+[2025-05-27T15:23:11.686+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags_example_dag.py took 0.138 seconds
+[2025-05-27T15:23:35.430+0000] {processor.py:157} INFO - Started process (PID=2711) to work on /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:35.431+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dags_example_dag.py for tasks to queue
+[2025-05-27T15:23:35.431+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:35.431+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:35.443+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing']) retrieved from /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:35.544+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:35.544+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-05-27T15:23:35.551+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:35.551+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-05-27T15:23:35.557+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:35.557+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-05-27T15:23:35.557+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:35.557+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-27T15:23:35.567+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:35.567+0000] {dag.py:2963} INFO - Creating ORM DAG for data_processing
+[2025-05-27T15:23:35.576+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:35.576+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing to 2025-05-26T00:00:00+00:00, run_after=2025-05-27T00:00:00+00:00
+[2025-05-27T15:23:35.590+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags_example_dag.py took 0.163 seconds
+[2025-05-27T15:23:37.443+0000] {processor.py:157} INFO - Started process (PID=2716) to work on /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:37.444+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dags_example_dag.py for tasks to queue
+[2025-05-27T15:23:37.445+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:37.444+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:37.453+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing']) retrieved from /opt/airflow/dags/dags_example_dag.py
+[2025-05-27T15:23:37.464+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:37.463+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-27T15:23:37.488+0000] {logging_mixin.py:154} INFO - [2025-05-27T15:23:37.488+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing to 2025-05-26T00:00:00+00:00, run_after=2025-05-27T00:00:00+00:00
+[2025-05-27T15:23:37.505+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags_example_dag.py took 0.064 seconds

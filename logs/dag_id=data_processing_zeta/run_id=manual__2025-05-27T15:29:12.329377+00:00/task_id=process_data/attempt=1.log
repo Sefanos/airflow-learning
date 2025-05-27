@@ -1,0 +1,14 @@
+[2025-05-27T15:29:19.164+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_processing_zeta.process_data manual__2025-05-27T15:29:12.329377+00:00 [queued]>
+[2025-05-27T15:29:19.170+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_processing_zeta.process_data manual__2025-05-27T15:29:12.329377+00:00 [queued]>
+[2025-05-27T15:29:19.171+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-27T15:29:19.180+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): process_data> on 2025-05-27 15:29:12.329377+00:00
+[2025-05-27T15:29:19.186+0000] {standard_task_runner.py:57} INFO - Started process 5321 to run task
+[2025-05-27T15:29:19.190+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'data_processing_zeta', 'process_data', 'manual__2025-05-27T15:29:12.329377+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/data_processing_dag.py', '--cfg-path', '/tmp/tmpqrebe199']
+[2025-05-27T15:29:19.192+0000] {standard_task_runner.py:85} INFO - Job 11: Subtask process_data
+[2025-05-27T15:29:19.225+0000] {task_command.py:416} INFO - Running <TaskInstance: data_processing_zeta.process_data manual__2025-05-27T15:29:12.329377+00:00 [running]> on host 4ad3a098ae3c
+[2025-05-27T15:29:19.282+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sefanoswhat' AIRFLOW_CTX_DAG_ID='data_processing_zeta' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T15:29:12.329377+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-27T15:29:12.329377+00:00'
+[2025-05-27T15:29:19.284+0000] {logging_mixin.py:154} INFO - Processing the downloaded data...
+[2025-05-27T15:29:19.292+0000] {python.py:194} INFO - Done. Returned value was: Data processing completed
+[2025-05-27T15:29:19.306+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=data_processing_zeta, task_id=process_data, execution_date=20250527T152912, start_date=20250527T152919, end_date=20250527T152919
+[2025-05-27T15:29:19.321+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-27T15:29:19.339+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

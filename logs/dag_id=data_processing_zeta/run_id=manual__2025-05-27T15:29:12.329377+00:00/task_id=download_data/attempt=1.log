@@ -1,0 +1,18 @@
+[2025-05-27T15:29:14.792+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_processing_zeta.download_data manual__2025-05-27T15:29:12.329377+00:00 [queued]>
+[2025-05-27T15:29:14.799+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_processing_zeta.download_data manual__2025-05-27T15:29:12.329377+00:00 [queued]>
+[2025-05-27T15:29:14.799+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-27T15:29:14.809+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): download_data> on 2025-05-27 15:29:12.329377+00:00
+[2025-05-27T15:29:14.815+0000] {standard_task_runner.py:57} INFO - Started process 5311 to run task
+[2025-05-27T15:29:14.819+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'data_processing_zeta', 'download_data', 'manual__2025-05-27T15:29:12.329377+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/data_processing_dag.py', '--cfg-path', '/tmp/tmpzdr6neon']
+[2025-05-27T15:29:14.821+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask download_data
+[2025-05-27T15:29:14.867+0000] {task_command.py:416} INFO - Running <TaskInstance: data_processing_zeta.download_data manual__2025-05-27T15:29:12.329377+00:00 [running]> on host 4ad3a098ae3c
+[2025-05-27T15:29:14.970+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sefanoswhat' AIRFLOW_CTX_DAG_ID='data_processing_zeta' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T15:29:12.329377+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-27T15:29:12.329377+00:00'
+[2025-05-27T15:29:14.972+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-27T15:29:14.973+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Downloading data from source..." && sleep 3 && echo "Data downloaded successfully."']
+[2025-05-27T15:29:14.983+0000] {subprocess.py:86} INFO - Output:
+[2025-05-27T15:29:14.985+0000] {subprocess.py:93} INFO - Downloading data from source...
+[2025-05-27T15:29:17.987+0000] {subprocess.py:93} INFO - Data downloaded successfully.
+[2025-05-27T15:29:17.989+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-27T15:29:18.020+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=data_processing_zeta, task_id=download_data, execution_date=20250527T152912, start_date=20250527T152914, end_date=20250527T152918
+[2025-05-27T15:29:18.040+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-27T15:29:18.059+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

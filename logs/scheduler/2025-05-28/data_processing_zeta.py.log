@@ -4118,3 +4118,724 @@
 [2025-05-28T13:21:49.845+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:21:49.845+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-05-28T13:21:49.887+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:21:49.886+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
 [2025-05-28T13:21:49.907+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.118 seconds
+[2025-05-28T13:22:20.671+0000] {processor.py:157} INFO - Started process (PID=142172) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:22:20.673+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:22:20.674+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:22:20.673+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:22:20.685+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:22:20.710+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:22:20.710+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:22:20.737+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:22:20.736+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:22:20.755+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T13:22:51.644+0000] {processor.py:157} INFO - Started process (PID=142414) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:22:51.646+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:22:51.647+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:22:51.646+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:22:51.661+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:22:51.690+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:22:51.690+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:22:51.717+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:22:51.716+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:22:51.736+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.095 seconds
+[2025-05-28T13:23:22.089+0000] {processor.py:157} INFO - Started process (PID=142656) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:23:22.090+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:23:22.091+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:23:22.090+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:23:22.105+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:23:22.131+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:23:22.130+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:23:22.157+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:23:22.157+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:23:22.184+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.099 seconds
+[2025-05-28T13:23:52.286+0000] {processor.py:157} INFO - Started process (PID=142898) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:23:52.298+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:23:52.299+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:23:52.298+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:23:52.324+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:23:52.357+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:23:52.357+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:23:52.400+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:23:52.399+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:23:52.438+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.166 seconds
+[2025-05-28T13:24:22.841+0000] {processor.py:157} INFO - Started process (PID=143140) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:24:22.842+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:24:22.843+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:24:22.843+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:24:22.856+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:24:22.891+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:24:22.891+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:24:22.942+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:24:22.942+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:24:22.963+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.127 seconds
+[2025-05-28T13:24:53.104+0000] {processor.py:157} INFO - Started process (PID=143382) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:24:53.105+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:24:53.106+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:24:53.106+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:24:53.118+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:24:53.145+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:24:53.145+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:24:53.172+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:24:53.171+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:24:53.193+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.092 seconds
+[2025-05-28T13:25:23.332+0000] {processor.py:157} INFO - Started process (PID=143624) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:25:23.337+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:25:23.337+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:25:23.337+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:25:23.359+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:25:23.406+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:25:23.406+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:25:23.439+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:25:23.439+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:25:23.456+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.135 seconds
+[2025-05-28T13:25:53.659+0000] {processor.py:157} INFO - Started process (PID=143866) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:25:53.661+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:25:53.664+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:25:53.662+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:25:53.690+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:25:53.755+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:25:53.755+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:25:53.783+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:25:53.783+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:25:53.808+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.158 seconds
+[2025-05-28T13:26:24.068+0000] {processor.py:157} INFO - Started process (PID=144108) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:26:24.069+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:26:24.070+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:26:24.069+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:26:24.082+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:26:24.112+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:26:24.112+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:26:24.139+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:26:24.139+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:26:24.159+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.095 seconds
+[2025-05-28T13:26:54.948+0000] {processor.py:157} INFO - Started process (PID=144350) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:26:54.953+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:26:54.954+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:26:54.954+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:26:54.972+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:26:55.005+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:26:55.005+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:26:55.035+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:26:55.035+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:26:55.055+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.117 seconds
+[2025-05-28T13:27:25.220+0000] {processor.py:157} INFO - Started process (PID=144592) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:27:25.221+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:27:25.221+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:27:25.221+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:27:25.233+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:27:25.260+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:27:25.260+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:27:25.306+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:27:25.306+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:27:25.341+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.125 seconds
+[2025-05-28T13:27:55.638+0000] {processor.py:157} INFO - Started process (PID=144834) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:27:55.641+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:27:55.642+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:27:55.642+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:27:55.654+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:27:55.679+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:27:55.679+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:27:55.706+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:27:55.705+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:27:55.727+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T13:28:26.049+0000] {processor.py:157} INFO - Started process (PID=145076) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:28:26.050+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:28:26.051+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:28:26.050+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:28:26.066+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:28:26.098+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:28:26.098+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:28:26.125+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:28:26.125+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:28:26.147+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.102 seconds
+[2025-05-28T13:28:56.323+0000] {processor.py:157} INFO - Started process (PID=145318) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:28:56.324+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:28:56.325+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:28:56.325+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:28:56.337+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:28:56.364+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:28:56.364+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:28:56.391+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:28:56.391+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:28:56.413+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.097 seconds
+[2025-05-28T13:29:26.677+0000] {processor.py:157} INFO - Started process (PID=145560) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:29:26.678+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:29:26.678+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:29:26.678+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:29:26.691+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:29:26.716+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:29:26.716+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:29:26.753+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:29:26.753+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:29:26.774+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.101 seconds
+[2025-05-28T13:29:56.816+0000] {processor.py:157} INFO - Started process (PID=145802) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:29:56.817+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:29:56.818+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:29:56.818+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:29:56.830+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:29:56.856+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:29:56.855+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:29:56.882+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:29:56.882+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:29:56.902+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.089 seconds
+[2025-05-28T13:30:27.168+0000] {processor.py:157} INFO - Started process (PID=146044) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:30:27.169+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:30:27.170+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:30:27.169+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:30:27.181+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:30:27.206+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:30:27.205+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:30:27.234+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:30:27.233+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:30:27.252+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T13:30:57.320+0000] {processor.py:157} INFO - Started process (PID=146286) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:30:57.321+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:30:57.322+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:30:57.321+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:30:57.333+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:30:57.359+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:30:57.359+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:30:57.386+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:30:57.386+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:30:57.407+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T13:31:27.543+0000] {processor.py:157} INFO - Started process (PID=146526) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:31:27.544+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:31:27.545+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:31:27.545+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:31:27.557+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:31:27.581+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:31:27.581+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:31:27.606+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:31:27.606+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:31:27.625+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.085 seconds
+[2025-05-28T13:31:58.157+0000] {processor.py:157} INFO - Started process (PID=146761) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:31:58.158+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:31:58.159+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:31:58.159+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:31:58.170+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:31:58.195+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:31:58.195+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:31:58.221+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:31:58.221+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:31:58.240+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.087 seconds
+[2025-05-28T13:32:28.436+0000] {processor.py:157} INFO - Started process (PID=147000) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:32:28.440+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:32:28.441+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:32:28.441+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:32:28.456+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:32:28.479+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:32:28.479+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:32:28.506+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:32:28.505+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:32:28.525+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T13:32:58.792+0000] {processor.py:157} INFO - Started process (PID=147242) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:32:58.793+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:32:58.794+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:32:58.794+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:32:58.806+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:32:58.832+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:32:58.832+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:32:58.859+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:32:58.859+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:32:58.881+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.092 seconds
+[2025-05-28T13:33:28.973+0000] {processor.py:157} INFO - Started process (PID=147484) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:33:28.974+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:33:28.975+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:33:28.974+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:33:28.986+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:33:29.014+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:33:29.014+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:33:29.041+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:33:29.041+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:33:29.064+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.094 seconds
+[2025-05-28T13:33:59.307+0000] {processor.py:157} INFO - Started process (PID=147726) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:33:59.308+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:33:59.309+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:33:59.309+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:33:59.320+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:33:59.345+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:33:59.345+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:33:59.372+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:33:59.372+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:33:59.392+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T13:34:29.476+0000] {processor.py:157} INFO - Started process (PID=147968) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:34:29.477+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:34:29.478+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:34:29.478+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:34:29.490+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:34:29.514+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:34:29.514+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:34:29.542+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:34:29.542+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:34:29.564+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.092 seconds
+[2025-05-28T13:34:59.855+0000] {processor.py:157} INFO - Started process (PID=148210) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:34:59.856+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:34:59.857+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:34:59.857+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:34:59.869+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:34:59.895+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:34:59.894+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:34:59.923+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:34:59.923+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:34:59.947+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.096 seconds
+[2025-05-28T13:35:30.834+0000] {processor.py:157} INFO - Started process (PID=148452) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:35:30.835+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:35:30.837+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:35:30.837+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:35:30.851+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:35:30.877+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:35:30.877+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:35:30.904+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:35:30.904+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:35:30.932+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.101 seconds
+[2025-05-28T13:36:01.714+0000] {processor.py:157} INFO - Started process (PID=148694) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:36:01.715+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:36:01.716+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:36:01.716+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:36:01.728+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:36:01.755+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:36:01.754+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:36:01.783+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:36:01.782+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:36:01.804+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T13:36:31.979+0000] {processor.py:157} INFO - Started process (PID=148936) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:36:31.980+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:36:31.981+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:36:31.981+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:36:31.992+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:36:32.018+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:36:32.017+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:36:32.045+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:36:32.045+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:36:32.066+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T13:37:02.130+0000] {processor.py:157} INFO - Started process (PID=149178) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:37:02.133+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:37:02.134+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:37:02.134+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:37:02.150+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:37:02.173+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:37:02.172+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:37:02.203+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:37:02.202+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:37:02.224+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.097 seconds
+[2025-05-28T13:37:32.334+0000] {processor.py:157} INFO - Started process (PID=149420) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:37:32.335+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:37:32.336+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:37:32.336+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:37:32.349+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:37:32.374+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:37:32.373+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:37:32.400+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:37:32.400+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:37:32.422+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.094 seconds
+[2025-05-28T13:38:03.030+0000] {processor.py:157} INFO - Started process (PID=149662) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:38:03.031+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:38:03.032+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:38:03.032+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:38:03.044+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:38:03.072+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:38:03.072+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:38:03.103+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:38:03.103+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:38:03.131+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.104 seconds
+[2025-05-28T13:38:33.288+0000] {processor.py:157} INFO - Started process (PID=149904) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:38:33.290+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:38:33.291+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:38:33.290+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:38:33.304+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:38:33.331+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:38:33.330+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:38:33.357+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:38:33.357+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:38:33.379+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.094 seconds
+[2025-05-28T13:39:03.533+0000] {processor.py:157} INFO - Started process (PID=150146) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:39:03.534+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:39:03.535+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:39:03.535+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:39:03.547+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:39:03.575+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:39:03.575+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:39:03.604+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:39:03.603+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:39:03.629+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.100 seconds
+[2025-05-28T13:39:33.984+0000] {processor.py:157} INFO - Started process (PID=150388) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:39:33.985+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:39:33.986+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:39:33.986+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:39:34.001+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:39:34.026+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:39:34.026+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:39:34.053+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:39:34.053+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:39:34.073+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T13:40:04.233+0000] {processor.py:157} INFO - Started process (PID=150630) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:40:04.234+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:40:04.236+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:40:04.235+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:40:04.247+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:40:04.272+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:40:04.272+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:40:04.302+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:40:04.302+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:40:04.320+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.090 seconds
+[2025-05-28T13:40:34.412+0000] {processor.py:157} INFO - Started process (PID=150875) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:40:34.413+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:40:34.414+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:40:34.413+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:40:34.423+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:40:34.440+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:40:34.440+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:40:34.457+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:40:34.457+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:40:34.470+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.062 seconds
+[2025-05-28T13:41:04.555+0000] {processor.py:157} INFO - Started process (PID=151114) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:41:04.557+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:41:04.558+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:41:04.557+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:41:04.570+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:41:04.595+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:41:04.595+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:41:04.621+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:41:04.621+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:41:04.639+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.087 seconds
+[2025-05-28T13:41:34.867+0000] {processor.py:157} INFO - Started process (PID=151356) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:41:34.868+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:41:34.869+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:41:34.869+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:41:34.880+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:41:34.905+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:41:34.905+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:41:34.935+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:41:34.935+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:41:34.954+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T13:42:05.342+0000] {processor.py:157} INFO - Started process (PID=151598) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:42:05.343+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:42:05.344+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:42:05.344+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:42:05.356+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:42:05.383+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:42:05.383+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:42:05.415+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:42:05.415+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:42:05.436+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.097 seconds
+[2025-05-28T13:42:35.511+0000] {processor.py:157} INFO - Started process (PID=151840) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:42:35.512+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:42:35.513+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:42:35.513+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:42:35.525+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:42:35.550+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:42:35.550+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:42:35.580+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:42:35.580+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:42:35.602+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.094 seconds
+[2025-05-28T13:43:05.919+0000] {processor.py:157} INFO - Started process (PID=152082) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:43:05.920+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:43:05.921+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:43:05.921+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:43:05.933+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:43:05.959+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:43:05.959+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:43:05.987+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:43:05.987+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:43:06.013+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.097 seconds
+[2025-05-28T13:43:36.197+0000] {processor.py:157} INFO - Started process (PID=152324) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:43:36.198+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:43:36.199+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:43:36.198+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:43:36.210+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:43:36.235+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:43:36.234+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:43:36.261+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:43:36.261+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:43:36.280+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.086 seconds
+[2025-05-28T13:44:06.775+0000] {processor.py:157} INFO - Started process (PID=152566) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:44:06.775+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:44:06.776+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:44:06.776+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:44:06.789+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:44:06.819+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:44:06.819+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:44:06.851+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:44:06.851+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:44:06.869+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.098 seconds
+[2025-05-28T13:44:37.349+0000] {processor.py:157} INFO - Started process (PID=152808) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:44:37.350+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:44:37.352+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:44:37.351+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:44:37.363+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:44:37.391+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:44:37.391+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:44:37.418+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:44:37.418+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:44:37.439+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T13:45:07.582+0000] {processor.py:157} INFO - Started process (PID=153050) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:45:07.583+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:45:07.585+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:45:07.584+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:45:07.596+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:45:07.621+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:45:07.621+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:45:07.649+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:45:07.648+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:45:07.668+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.089 seconds
+[2025-05-28T13:45:37.873+0000] {processor.py:157} INFO - Started process (PID=153292) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:45:37.874+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:45:37.875+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:45:37.875+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:45:37.887+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:45:37.916+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:45:37.916+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:45:37.943+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:45:37.943+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:45:37.980+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.110 seconds
+[2025-05-28T13:46:08.619+0000] {processor.py:157} INFO - Started process (PID=153534) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:46:08.620+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:46:08.621+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:46:08.621+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:46:08.633+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:46:08.662+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:46:08.661+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:46:08.688+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:46:08.688+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:46:08.708+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T13:46:39.223+0000] {processor.py:157} INFO - Started process (PID=153776) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:46:39.224+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:46:39.225+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:46:39.225+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:46:39.237+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:46:39.262+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:46:39.262+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:46:39.291+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:46:39.291+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:46:39.311+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T13:47:09.412+0000] {processor.py:157} INFO - Started process (PID=154018) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:47:09.413+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:47:09.414+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:47:09.414+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:47:09.592+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:47:09.613+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:47:09.613+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:47:09.643+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:47:09.643+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:47:09.685+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.277 seconds
+[2025-05-28T13:47:39.987+0000] {processor.py:157} INFO - Started process (PID=154260) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:47:39.988+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:47:39.989+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:47:39.988+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:47:40.000+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:47:40.026+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:47:40.026+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:47:40.052+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:47:40.052+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:47:40.071+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T13:48:10.122+0000] {processor.py:157} INFO - Started process (PID=154502) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:48:10.123+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:48:10.124+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:48:10.123+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:48:10.152+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:48:10.190+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:48:10.190+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:48:10.224+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:48:10.224+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:48:10.241+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.123 seconds
+[2025-05-28T13:48:40.315+0000] {processor.py:157} INFO - Started process (PID=154744) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:48:40.316+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:48:40.317+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:48:40.317+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:48:40.328+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:48:40.355+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:48:40.355+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:48:40.384+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:48:40.383+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:48:40.403+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T13:49:11.020+0000] {processor.py:157} INFO - Started process (PID=154986) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:49:11.021+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:49:11.022+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:49:11.022+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:49:11.034+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:49:11.059+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:49:11.059+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:49:11.086+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:49:11.085+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:49:11.107+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T13:49:41.866+0000] {processor.py:157} INFO - Started process (PID=155228) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:49:41.867+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:49:41.868+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:49:41.867+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:49:41.879+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:49:41.904+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:49:41.904+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:49:41.936+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:49:41.936+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:49:41.956+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.094 seconds
+[2025-05-28T13:50:12.604+0000] {processor.py:157} INFO - Started process (PID=155470) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:50:12.605+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:50:12.606+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:50:12.606+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:50:12.618+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:50:12.643+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:50:12.642+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:50:12.669+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:50:12.669+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:50:12.691+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.090 seconds
+[2025-05-28T13:50:43.160+0000] {processor.py:157} INFO - Started process (PID=155712) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:50:43.161+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:50:43.162+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:50:43.161+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:50:43.173+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:50:43.199+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:50:43.198+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:50:43.227+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:50:43.227+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:50:43.246+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.090 seconds
+[2025-05-28T13:51:13.811+0000] {processor.py:157} INFO - Started process (PID=155954) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:51:13.812+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:51:13.813+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:51:13.813+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:51:13.824+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:51:13.863+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:51:13.863+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:51:13.889+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:51:13.889+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:51:13.908+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.100 seconds
+[2025-05-28T13:51:44.680+0000] {processor.py:157} INFO - Started process (PID=156196) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:51:44.682+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:51:44.683+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:51:44.683+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:51:44.695+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:51:44.720+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:51:44.719+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:51:44.750+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:51:44.750+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:51:44.770+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.102 seconds
+[2025-05-28T13:52:15.671+0000] {processor.py:157} INFO - Started process (PID=156438) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:52:15.673+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:52:15.674+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:52:15.674+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:52:15.685+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:52:15.714+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:52:15.714+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:52:15.740+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:52:15.739+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:52:15.760+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.092 seconds
+[2025-05-28T13:52:45.858+0000] {processor.py:157} INFO - Started process (PID=156680) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:52:45.859+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:52:45.860+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:52:45.860+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:52:45.871+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:52:45.897+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:52:45.897+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:52:45.923+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:52:45.923+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:52:45.944+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.089 seconds
+[2025-05-28T13:53:16.779+0000] {processor.py:157} INFO - Started process (PID=156922) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:53:16.780+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:53:16.781+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:53:16.781+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:53:16.793+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:53:16.831+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:53:16.831+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:53:16.860+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:53:16.859+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:53:16.878+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.102 seconds
+[2025-05-28T13:53:47.670+0000] {processor.py:157} INFO - Started process (PID=157164) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:53:47.671+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:53:47.672+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:53:47.672+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:53:47.683+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:53:47.709+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:53:47.708+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:53:47.737+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:53:47.737+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:53:47.754+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T13:54:18.583+0000] {processor.py:157} INFO - Started process (PID=157406) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:54:18.584+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:54:18.585+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:54:18.585+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:54:18.605+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:54:18.652+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:54:18.652+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:54:18.683+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:54:18.683+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:54:18.700+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.121 seconds
+[2025-05-28T13:54:49.318+0000] {processor.py:157} INFO - Started process (PID=157648) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:54:49.321+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:54:49.322+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:54:49.321+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:54:49.334+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:54:49.359+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:54:49.359+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:54:49.386+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:54:49.385+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:54:49.405+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.092 seconds
+[2025-05-28T13:55:19.862+0000] {processor.py:157} INFO - Started process (PID=157890) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:55:19.863+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:55:19.864+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:55:19.864+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:55:19.875+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:55:19.904+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:55:19.903+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:55:19.929+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:55:19.929+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:55:19.947+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.089 seconds
+[2025-05-28T13:55:50.661+0000] {processor.py:157} INFO - Started process (PID=158132) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:55:50.662+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:55:50.663+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:55:50.663+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:55:50.675+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:55:50.700+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:55:50.700+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:55:50.726+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:55:50.725+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:55:50.746+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T13:56:20.790+0000] {processor.py:157} INFO - Started process (PID=158374) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:56:20.791+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:56:20.792+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:56:20.792+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:56:20.803+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:56:20.830+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:56:20.830+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:56:20.871+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:56:20.870+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:56:20.888+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.102 seconds
+[2025-05-28T13:56:51.562+0000] {processor.py:157} INFO - Started process (PID=158616) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:56:51.563+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:56:51.564+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:56:51.564+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:56:51.576+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:56:51.600+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:56:51.600+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:56:51.627+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:56:51.626+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:56:51.644+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.086 seconds
+[2025-05-28T13:57:22.319+0000] {processor.py:157} INFO - Started process (PID=158858) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:57:22.320+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:57:22.321+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:57:22.320+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:57:22.333+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:57:22.359+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:57:22.359+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:57:22.386+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:57:22.386+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:57:22.405+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.090 seconds
+[2025-05-28T13:57:52.436+0000] {processor.py:157} INFO - Started process (PID=159100) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:57:52.437+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:57:52.438+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:57:52.437+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:57:52.449+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:57:52.485+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:57:52.485+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:57:52.514+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:57:52.514+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:57:52.534+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.101 seconds
+[2025-05-28T13:58:22.663+0000] {processor.py:157} INFO - Started process (PID=159342) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:58:22.664+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:58:22.664+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:58:22.664+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:58:22.676+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:58:22.701+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:58:22.701+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:58:22.728+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:58:22.728+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:58:22.748+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.089 seconds
+[2025-05-28T13:58:52.988+0000] {processor.py:157} INFO - Started process (PID=159584) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:58:52.988+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:58:52.989+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:58:52.989+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:58:52.997+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:58:53.016+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:58:53.016+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:58:53.036+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:58:53.036+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:58:53.051+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.066 seconds
+[2025-05-28T13:59:23.775+0000] {processor.py:157} INFO - Started process (PID=159812) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:59:23.776+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:59:23.777+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:59:23.777+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:59:23.788+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:59:23.815+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:59:23.814+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:59:23.843+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:59:23.843+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:59:23.860+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.089 seconds
+[2025-05-28T13:59:54.812+0000] {processor.py:157} INFO - Started process (PID=160054) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:59:54.814+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T13:59:54.816+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:59:54.815+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:59:54.845+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T13:59:54.898+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:59:54.898+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T13:59:54.985+0000] {logging_mixin.py:154} INFO - [2025-05-28T13:59:54.985+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T13:59:55.008+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.205 seconds
+[2025-05-28T14:00:25.958+0000] {processor.py:157} INFO - Started process (PID=160296) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:00:25.959+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:00:25.960+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:00:25.960+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:00:25.972+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:00:25.997+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:00:25.997+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:00:26.025+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:00:26.024+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:00:26.045+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T14:00:56.293+0000] {processor.py:157} INFO - Started process (PID=160535) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:00:56.294+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:00:56.295+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:00:56.295+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:00:56.307+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:00:56.331+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:00:56.331+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:00:56.357+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:00:56.357+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:00:56.377+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T14:01:26.478+0000] {processor.py:157} INFO - Started process (PID=160777) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:01:26.479+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:01:26.480+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:01:26.480+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:01:26.492+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:01:26.516+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:01:26.516+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:01:26.543+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:01:26.543+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:01:26.562+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T14:01:56.664+0000] {processor.py:157} INFO - Started process (PID=161019) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:01:56.667+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:01:56.668+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:01:56.668+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:01:56.693+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:01:56.718+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:01:56.718+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:01:56.762+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:01:56.762+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:01:56.788+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.133 seconds
+[2025-05-28T14:02:26.862+0000] {processor.py:157} INFO - Started process (PID=161261) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:02:26.863+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:02:26.865+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:02:26.864+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:02:26.876+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:02:26.907+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:02:26.907+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:02:26.934+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:02:26.934+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:02:26.954+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.096 seconds
+[2025-05-28T14:02:56.998+0000] {processor.py:157} INFO - Started process (PID=161503) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:02:56.999+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:02:57.000+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:02:57.000+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:02:57.013+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:02:57.039+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:02:57.039+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:02:57.066+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:02:57.066+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:02:57.087+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.092 seconds
+[2025-05-28T14:03:27.137+0000] {processor.py:157} INFO - Started process (PID=161745) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:03:27.138+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:03:27.139+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:03:27.138+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:03:27.151+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:03:27.176+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:03:27.176+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:03:27.203+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:03:27.203+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:03:27.223+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.090 seconds
+[2025-05-28T14:03:57.271+0000] {processor.py:157} INFO - Started process (PID=161987) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:03:57.272+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:03:57.273+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:03:57.273+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:03:57.284+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:03:57.308+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:03:57.308+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:03:57.336+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:03:57.335+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:03:57.355+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T14:04:27.524+0000] {processor.py:157} INFO - Started process (PID=162229) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:04:27.525+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:04:27.527+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:04:27.526+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:04:27.543+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:04:27.570+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:04:27.569+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:04:27.597+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:04:27.597+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:04:27.619+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.099 seconds
+[2025-05-28T14:04:57.763+0000] {processor.py:157} INFO - Started process (PID=162471) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:04:57.764+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:04:57.765+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:04:57.765+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:04:57.776+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:04:57.810+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:04:57.810+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:04:57.853+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:04:57.853+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:04:57.869+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.110 seconds
+[2025-05-28T14:05:28.684+0000] {processor.py:157} INFO - Started process (PID=162713) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:05:28.685+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:05:28.686+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:05:28.686+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:05:28.697+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:05:28.722+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:05:28.722+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:05:28.751+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:05:28.751+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:05:28.774+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T14:05:58.950+0000] {processor.py:157} INFO - Started process (PID=162955) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:05:58.951+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:05:58.952+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:05:58.952+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:05:58.966+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:05:58.991+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:05:58.991+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:05:59.017+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:05:59.017+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:05:59.037+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.090 seconds
+[2025-05-28T14:06:29.070+0000] {processor.py:157} INFO - Started process (PID=163197) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:06:29.071+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:06:29.072+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:06:29.072+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:06:29.084+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:06:29.109+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:06:29.108+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:06:29.135+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:06:29.135+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:06:29.155+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.089 seconds
+[2025-05-28T14:06:59.278+0000] {processor.py:157} INFO - Started process (PID=163439) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:06:59.279+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:06:59.280+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:06:59.280+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:06:59.292+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:06:59.317+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:06:59.317+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:06:59.344+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:06:59.344+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:06:59.365+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T14:07:30.255+0000] {processor.py:157} INFO - Started process (PID=163681) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:07:30.256+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:07:30.257+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:07:30.257+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:07:30.268+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:07:30.293+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:07:30.293+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:07:30.329+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:07:30.329+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:07:30.348+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.097 seconds
+[2025-05-28T14:08:00.527+0000] {processor.py:157} INFO - Started process (PID=163923) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:08:00.528+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:08:00.529+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:08:00.529+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:08:00.542+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:08:00.587+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:08:00.587+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:08:00.621+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:08:00.620+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:08:00.638+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.114 seconds
+[2025-05-28T14:08:31.290+0000] {processor.py:157} INFO - Started process (PID=164165) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:08:31.292+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:08:31.293+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:08:31.293+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:08:31.304+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:08:31.329+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:08:31.329+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:08:31.355+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:08:31.355+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:08:31.374+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.088 seconds
+[2025-05-28T14:09:01.960+0000] {processor.py:157} INFO - Started process (PID=164407) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:09:01.961+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:09:01.962+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:09:01.962+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:09:01.974+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:09:02.001+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:09:02.001+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:09:02.027+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:09:02.027+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:09:02.053+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.096 seconds
+[2025-05-28T14:09:32.887+0000] {processor.py:157} INFO - Started process (PID=164649) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:09:32.889+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:09:32.892+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:09:32.892+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:09:32.906+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:09:32.932+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:09:32.932+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:09:32.973+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:09:32.973+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:09:32.992+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.109 seconds
+[2025-05-28T14:10:03.841+0000] {processor.py:157} INFO - Started process (PID=164891) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:10:03.842+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:10:03.843+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:10:03.842+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:10:03.866+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:10:03.901+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:10:03.900+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:10:03.930+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:10:03.929+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:10:03.947+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.110 seconds
+[2025-05-28T14:10:34.850+0000] {processor.py:157} INFO - Started process (PID=165133) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:10:34.851+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:10:34.852+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:10:34.852+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:10:34.864+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:10:34.891+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:10:34.891+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:10:34.918+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:10:34.918+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:10:34.937+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T14:11:05.003+0000] {processor.py:157} INFO - Started process (PID=165375) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:11:05.004+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:11:05.006+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:11:05.005+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:11:05.017+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:11:05.043+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:11:05.043+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:11:05.072+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:11:05.072+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:11:05.093+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.093 seconds
+[2025-05-28T14:11:35.443+0000] {processor.py:157} INFO - Started process (PID=165617) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:11:35.444+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:11:35.445+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:11:35.445+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:11:35.457+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:11:35.484+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:11:35.484+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:11:35.514+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:11:35.514+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:11:35.535+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.096 seconds
+[2025-05-28T14:12:05.925+0000] {processor.py:157} INFO - Started process (PID=165859) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:12:05.926+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:12:05.927+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:12:05.927+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:12:05.939+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:12:05.965+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:12:05.965+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:12:05.995+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:12:05.995+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:12:06.016+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.096 seconds
+[2025-05-28T14:12:36.277+0000] {processor.py:157} INFO - Started process (PID=166101) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:12:36.279+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:12:36.282+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:12:36.281+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:12:36.340+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:12:36.418+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:12:36.418+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:12:36.463+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:12:36.463+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:12:36.483+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.211 seconds
+[2025-05-28T14:13:06.693+0000] {processor.py:157} INFO - Started process (PID=166343) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:13:06.694+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:13:06.695+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:13:06.695+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:13:06.707+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:13:06.735+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:13:06.735+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:13:06.762+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:13:06.762+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:13:06.784+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.095 seconds
+[2025-05-28T14:13:37.282+0000] {processor.py:157} INFO - Started process (PID=166585) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:13:37.283+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:13:37.285+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:13:37.284+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:13:37.296+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:13:37.320+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:13:37.319+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:13:37.346+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:13:37.346+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:13:37.366+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.091 seconds
+[2025-05-28T14:14:07.538+0000] {processor.py:157} INFO - Started process (PID=166827) to work on /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:14:07.539+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/data_processing_zeta.py for tasks to queue
+[2025-05-28T14:14:07.540+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:14:07.540+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:14:07.552+0000] {processor.py:839} INFO - DAG(s) dict_keys(['data_processing_zeta']) retrieved from /opt/airflow/dags/data_processing_zeta.py
+[2025-05-28T14:14:07.577+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:14:07.577+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-28T14:14:07.604+0000] {logging_mixin.py:154} INFO - [2025-05-28T14:14:07.604+0000] {dag.py:3722} INFO - Setting next_dagrun for data_processing_zeta to 2025-05-27T00:00:00+00:00, run_after=2025-05-28T00:00:00+00:00
+[2025-05-28T14:14:07.638+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/data_processing_zeta.py took 0.104 seconds

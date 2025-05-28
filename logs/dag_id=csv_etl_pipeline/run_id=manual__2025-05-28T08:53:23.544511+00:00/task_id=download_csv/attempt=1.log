@@ -1,0 +1,14 @@
+[2025-05-28T08:53:27.106+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_etl_pipeline.download_csv manual__2025-05-28T08:53:23.544511+00:00 [queued]>
+[2025-05-28T08:53:27.115+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_etl_pipeline.download_csv manual__2025-05-28T08:53:23.544511+00:00 [queued]>
+[2025-05-28T08:53:27.115+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 4
+[2025-05-28T08:53:27.127+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): download_csv> on 2025-05-28 08:53:23.544511+00:00
+[2025-05-28T08:53:27.137+0000] {standard_task_runner.py:57} INFO - Started process 14202 to run task
+[2025-05-28T08:53:27.143+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'csv_etl_pipeline', 'download_csv', 'manual__2025-05-28T08:53:23.544511+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/csv_etl_pipeline.py', '--cfg-path', '/tmp/tmppjz3v7ov']
+[2025-05-28T08:53:27.144+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask download_csv
+[2025-05-28T08:53:27.204+0000] {task_command.py:416} INFO - Running <TaskInstance: csv_etl_pipeline.download_csv manual__2025-05-28T08:53:23.544511+00:00 [running]> on host fe2c11ded3dc
+[2025-05-28T08:53:27.278+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Sefanosok' AIRFLOW_CTX_DAG_ID='csv_etl_pipeline' AIRFLOW_CTX_TASK_ID='download_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-05-28T08:53:23.544511+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-28T08:53:23.544511+00:00'
+[2025-05-28T08:53:54.593+0000] {logging_mixin.py:154} INFO - CSV file successfully downloaded to /opt/***/data/raw/data_20250528_085327.csv
+[2025-05-28T08:53:54.613+0000] {python.py:194} INFO - Done. Returned value was: /opt/***/data/raw/data_20250528_085327.csv
+[2025-05-28T08:53:54.633+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=csv_etl_pipeline, task_id=download_csv, execution_date=20250528T085323, start_date=20250528T085327, end_date=20250528T085354
+[2025-05-28T08:53:54.667+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-28T08:53:54.696+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

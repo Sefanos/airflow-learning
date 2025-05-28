@@ -1,0 +1,31 @@
+=== DATA ANALYSIS REPORT ===
+
+Report generated at: 2025-05-28 08:53:59.429310
+
+=== TRANSFORMATION STATISTICS ===
+Original rows: 100000
+Processed rows: 100000
+Rows removed: 0
+
+=== COLUMN TYPES ===
+Index: int64
+User Id: object
+First Name: object
+Last Name: object
+Sex: object
+Email: object
+Phone: object
+Date of birth: object
+Job Title: object
+
+=== SUMMARY STATISTICS ===
+Column: Index
+  - count: 100000.0
+  - mean: 50000.5
+  - std: 28867.65779668774
+  - min: 1.0
+  - 25%: 25000.75
+  - 50%: 50000.5
+  - 75%: 75000.25
+  - max: 100000.0
+

@@ -26,7 +26,6 @@ def json_serialize_df_column(obj):
 # Function to load data files
 @st.cache_data(ttl=300)
 def get_data_files():
-    # Use absolute paths that match the container paths due to volume mapping
     raw_files = glob.glob('./data/raw/*.csv')
     processed_files = glob.glob('./data/processed/processed_data_*.csv')
     report_files = glob.glob('./data/processed/analysis_report_*.txt')
@@ -37,6 +36,31 @@ def get_data_files():
     report_files = sorted(report_files, key=os.path.getctime, reverse=True) if report_files else []
     
     return raw_files, processed_files, report_files
+
+# Caching functions for performance
+@st.cache_data(ttl=300)
+def calculate_age_metrics(df, birth_date_col):
+    today = pd.to_datetime('today')
+    df = df.copy()
+    df['age'] = today.year - pd.to_datetime(df[birth_date_col]).dt.year
+    birth_dates = pd.to_datetime(df[birth_date_col])
+    df.loc[((today.month < birth_dates.dt.month) | 
+           ((today.month == birth_dates.dt.month) & (today.day < birth_dates.dt.day))), 'age'] -= 1
+    return df['age']
+
+@st.cache_data(ttl=300)
+def get_email_domain_stats(df):
+    df['email_domain'] = df['email'].str.extract(r'@(.+)$')
+    return df['email_domain'].value_counts().head(10)
+
+@st.cache_data(ttl=300)
+def get_area_code_stats(df):
+    # Remove extensions and standardize separators
+    df['cleaned_phone'] = df['phone'].str.extract(r'^([^x]*)')  # Remove everything after 'x'
+    df['cleaned_phone'] = df['cleaned_phone'].str.replace(r'[^\d]', '')  # Remove non-digits
+    # Extract first 3 digits as area code
+    df['area_code'] = df['cleaned_phone'].str[:3]
+    return df['area_code'].value_counts().head(10)
 
 # Function to create a metric card
 def metric_card(title, value, delta=None, suffix=""):
@@ -51,7 +75,7 @@ st.markdown("""
 This dashboard provides insights into the data processed by the Airflow ETL pipeline.
 """)
 
-# Load data
+# Load data files
 raw_files, processed_files, report_files = get_data_files()
 
 # Check if any files were found
@@ -63,9 +87,10 @@ if not (raw_files or processed_files):
 st.sidebar.header("Data Selection")
 st.sidebar.markdown("Select a file to analyze:")
 
-# File type tabs
+# File type selector
 file_type = st.sidebar.radio("Select Data Type", ["Processed Data", "Raw Data"])
 
+# File selection logic
 if file_type == "Processed Data":
     if processed_files:
         selected_file = st.sidebar.selectbox(
@@ -89,413 +114,415 @@ else:  # Raw Data
         st.error("No raw data files found.")
         st.stop()
 
-# Load selected file
+# Main try-except block for data loading and processing
 try:
-    df = pd.read_csv(file_path)
+    # Load the selected file with optimized datatypes
+    try:
+        df = pd.read_csv(file_path, low_memory=False)
+        
+        # Optimize numeric columns
+        for col in df.select_dtypes(include=['int64', 'float64']).columns:
+            if df[col].notnull().all():  # Only optimize if no null values
+                if df[col].dtype == 'int64' and df[col].between(df[col].min(), df[col].max()).all():
+                    df[col] = df[col].astype('int32')
+                elif df[col].dtype == 'float64':
+                    df[col] = df[col].astype('float32')
+        
+        # Convert problematic column types to string
+        for col in df.columns:
+            if not pd.api.types.is_numeric_dtype(df[col]) and not pd.api.types.is_string_dtype(df[col]):
+                df[col] = df[col].astype(str)
+    except Exception as e:
+        st.error(f"Error loading data: {str(e)}")
+        st.stop()
     
-    # Convert problematic column types to string to avoid serialization issues
-    for col in df.columns:
-        if not pd.api.types.is_numeric_dtype(df[col]) and not pd.api.types.is_string_dtype(df[col]):
-            df[col] = df[col].astype(str)
-    
+    # Get file statistics
     file_stats = os.stat(file_path)
     file_date = datetime.fromtimestamp(file_stats.st_mtime)
     
-    # Display basic file info above tabs
+    # Display basic file info
     st.markdown(f"### File: `{selected_file}`")
     st.markdown(f"**Last modified:** {file_date.strftime('%Y-%m-%d %H:%M:%S')}  |  **Size:** {file_stats.st_size / 1024:.2f} KB  |  **Records:** {len(df):,}  |  **Columns:** {len(df.columns)}")
-    
-    # =============== MAIN DASHBOARD TABS ===============
+    # Create tabs for different views
     main_tabs = st.tabs([
-        "📋 Overview", 
-        "📊 Column Analysis", 
-        "📈 Visualizations", 
-        "🔍 Data Explorer",
-        "📝 Data Quality"
+        "📊 Overview", 
+        "📈 Standard Charts",
+        "👥 Demographics",
+        "🔍 Patterns",
+        "📋 Column Analysis"
     ])
+
+    # Identify numeric and categorical columns
+    numeric_columns = df.select_dtypes(include=[np.number]).columns.tolist()
+    categorical_columns = df.select_dtypes(include=['object']).columns.tolist()
 
     # =============== OVERVIEW TAB ===============
     with main_tabs[0]:
-        col1, col2 = st.columns([3, 2])
-        
+        st.subheader("Data Overview")
+
+        # Display summary statistics
+        col1, col2, col3 = st.columns(3)
         with col1:
-            st.subheader("Data Preview")
-            st.dataframe(df.head(10), use_container_width=True)
-            
-            # Summary statistics - handle non-numeric columns
-            st.subheader("Summary Statistics")
-            try:
-                stats_df = df.select_dtypes(include=['number']).describe()
-                st.dataframe(stats_df, use_container_width=True)
-            except Exception as e:
-                st.warning(f"Could not generate numeric statistics: {str(e)}")
-                st.dataframe(df.describe(include='all'), use_container_width=True)
-            
+            metric_card("Total Records", len(df))
         with col2:
-            st.subheader("File Information")
-            
-            # File metrics
-            metric_card("File Age", f"{(datetime.now() - file_date).days}", suffix=" days")
-            metric_card("Number of Rows", f"{len(df):,}")
-            metric_card("Number of Columns", f"{len(df.columns):,}")
-            
-            # Data types distribution
-            st.subheader("Column Data Types")
-            # Safely convert dtypes to strings for grouping
-            dtype_mapping = {col: str(dtype) for col, dtype in zip(df.columns, df.dtypes)}
-            type_counts = pd.Series(dtype_mapping).value_counts().reset_index()
-            type_counts.columns = ['Data Type', 'Count']
-            
-            # Create pie chart with type counts
-            try:
-                fig = px.pie(
-                    type_counts, 
-                    values='Count', 
-                    names='Data Type',
-                    color_discrete_sequence=px.colors.qualitative.Pastel,
-                    hole=0.4
-                )
-                fig.update_layout(
-                    legend=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5),
-                    margin=dict(t=25, b=0, l=25, r=25),
-                    height=300
+            metric_card("Numeric Columns", len(numeric_columns))
+        with col3:
+            metric_card("Categorical Columns", len(categorical_columns))
+
+        # Display data sample
+        st.subheader("Data Sample")
+        st.dataframe(df.head(), use_container_width=True)
+
+        # Display summary statistics
+        st.subheader("Summary Statistics")
+        if numeric_columns:
+            stats_df = df[numeric_columns].describe()
+            st.dataframe(stats_df, use_container_width=True)
+        else:
+            st.info("No numeric columns found for summary statistics.")
+
+    # =============== STANDARD CHARTS TAB (Previously Data Visualization) ===============
+    with main_tabs[1]:
+        st.subheader("Standard Charts")
+
+        # Visualization type selector
+        viz_type = st.selectbox(
+            "Select Visualization Type",
+            ["Distribution Plot", "Scatter Plot", "Box Plot", "Bar Plot"]
+        )
+
+        if viz_type == "Distribution Plot":
+            col = st.selectbox("Select Column", numeric_columns)
+            if col:
+                fig = px.histogram(
+                    df, x=col,
+                    title=f"Distribution of {col}",
+                    marginal="box"
                 )
                 st.plotly_chart(fig, use_container_width=True)
-            except Exception as e:
-                st.warning(f"Could not generate type distribution chart: {str(e)}")
-                st.dataframe(type_counts, use_container_width=True)
 
-    # =============== COLUMN ANALYSIS TAB ===============
-    with main_tabs[1]:
-        st.subheader("Column Details")
+        elif viz_type == "Scatter Plot":
+            col1 = st.selectbox("Select X-axis", numeric_columns, key="scatter_x")
+            col2 = st.selectbox("Select Y-axis", numeric_columns, key="scatter_y")
+            color_col = st.selectbox(
+                "Color by (optional)", 
+                ["None"] + categorical_columns,
+                key="scatter_color"
+            )
+
+            if col1 and col2:
+                fig = px.scatter(
+                    df,
+                    x=col1,
+                    y=col2,
+                    color=None if color_col == "None" else color_col,
+                    title=f"{col2} vs {col1}"
+                )
+                st.plotly_chart(fig, use_container_width=True)
+
+        elif viz_type == "Box Plot":
+            col = st.selectbox("Select Numeric Column", numeric_columns)
+            group_col = st.selectbox(
+                "Group by (optional)", 
+                ["None"] + categorical_columns
+            )
+
+            if col:
+                if group_col != "None":
+                    fig = px.box(df, x=group_col, y=col)
+                else:
+                    fig = px.box(df, y=col)
+                st.plotly_chart(fig, use_container_width=True)
+
+        elif viz_type == "Bar Plot":
+            col = st.selectbox("Select Category Column", categorical_columns)
+            if col:
+                value_counts = df[col].value_counts()
+                fig = px.bar(
+                    x=value_counts.index,
+                    y=value_counts.values,
+                    title=f"Count of {col}"
+                )
+                st.plotly_chart(fig, use_container_width=True)
+
+    # =============== DEMOGRAPHICS TAB ===============
+    with main_tabs[2]:
+        st.subheader("Demographic Analysis")
         
-        # Column selection
-        selected_column = st.selectbox(
-            "Select column to analyze",
-            options=df.columns.tolist()
+        demo_type = st.selectbox(
+            "Select Demographics View",
+            ["Age Analysis", "Gender Distribution", "Job Analysis", "Geographic Distribution", "Email Analysis"]
         )
         
-        col1, col2 = st.columns([1, 1])
-        
-        with col1:
-            # Column statistics
-            st.subheader(f"Statistics for '{selected_column}'")
-            
-            if pd.api.types.is_numeric_dtype(df[selected_column]):
-                # Handle numeric columns
-                try:
-                    stats = pd.DataFrame({
-                        'Statistic': ['Count', 'Mean', 'Std Dev', 'Min', '25%', 'Median', '75%', 'Max', 'Null Count', 'Unique Values'],
-                        'Value': [
-                            df[selected_column].count(),
-                            df[selected_column].mean(),
-                            df[selected_column].std(),
-                            df[selected_column].min(),
-                            df[selected_column].quantile(0.25),
-                            df[selected_column].median(),
-                            df[selected_column].quantile(0.75),
-                            df[selected_column].max(),
-                            df[selected_column].isna().sum(),
-                            df[selected_column].nunique()
-                        ]
-                    })
-                    
-                    # Format numeric values
-                    stats['Value'] = stats['Value'].apply(lambda x: f"{x:,.4f}" if isinstance(x, (int, float)) else str(x))
-                    
-                except Exception as e:
-                    st.warning(f"Error calculating statistics: {str(e)}")
-                    stats = pd.DataFrame({
-                        'Statistic': ['Count', 'Null Count', 'Unique Values'],
-                        'Value': [
-                            df[selected_column].count(),
-                            df[selected_column].isna().sum(),
-                            df[selected_column].nunique()
-                        ]
-                    })
+        if demo_type == "Age Analysis":
+            # Calculate age from birth date if available
+            if 'birth_date' in df.columns or 'date_of_birth' in df.columns or 'Date of birth' in df.columns:
+                birth_date_col = 'birth_date' if 'birth_date' in df.columns else ('date_of_birth' if 'date_of_birth' in df.columns else 'Date of birth')
+                today = pd.to_datetime('today')
+                df['age'] = today.year - pd.to_datetime(df[birth_date_col]).dt.year
+                # Adjust for birthdays that haven't occurred this year
+                birth_dates = pd.to_datetime(df[birth_date_col])
+                df.loc[((today.month < birth_dates.dt.month) | 
+                       ((today.month == birth_dates.dt.month) & (today.day < birth_dates.dt.day))), 'age'] -= 1
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    # Age distribution
+                    fig = px.histogram(
+                        df,
+                        x='age',
+                        nbins=20,
+                        title="Age Distribution"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    # Age groups
+                    df['age_group'] = pd.cut(df['age'], 
+                        bins=[0, 18, 25, 35, 50, 65, 100],
+                        labels=['Under 18', '18-25', '26-35', '36-50', '51-65', '65+'])
+                    age_groups = df['age_group'].value_counts()
+                    fig = px.pie(values=age_groups.values, 
+                               names=age_groups.index, 
+                               title="Age Groups Distribution")
+                    st.plotly_chart(fig, use_container_width=True)
             else:
-                # Handle non-numeric columns
-                try:
-                    most_common = None
-                    freq_most_common = 0
+                st.warning("No birth date column found in the dataset")
+                
+        elif demo_type == "Gender Distribution":
+            if 'Sex' in df.columns:
+                col1, col2 = st.columns(2)
+                with col1:
+                    # Gender distribution
+                    gender_dist = df['Sex'].value_counts()
+                    fig = px.pie(
+                        values=gender_dist.values,
+                        names=gender_dist.index,
+                        title="Gender Distribution"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    # Gender statistics
+                    st.subheader("Gender Statistics")
+                    st.dataframe(df['Sex'].value_counts(normalize=True)
+                               .mul(100)
+                               .round(2)
+                               .reset_index()
+                               .rename(columns={'index': 'Gender', 
+                                              'Sex': 'Percentage (%)'}))
+            else:
+                st.warning("No gender/sex column found in the dataset")
+                
+        elif demo_type == "Job Analysis":
+            if 'Job Title' in df.columns:
+                col1, col2 = st.columns(2)
+                with col1:
+                    # Top jobs
+                    top_jobs = df['Job Title'].value_counts().head(10)
+                    fig = px.bar(
+                        x=top_jobs.index,
+                        y=top_jobs.values,
+                        title="Top 10 Job Titles"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    # Job titles by gender if available
+                    if 'Sex' in df.columns:
+                        job_gender = pd.crosstab(df['Job Title'], df['Sex']).head(10)
+                        fig = px.bar(
+                            job_gender,
+                            title="Top 10 Jobs by Gender",
+                            barmode='group'
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+                    else:
+                        st.info("Sex data not available for job distribution")
+            else:
+                st.warning("No job title column found in the dataset")
+                
+        elif demo_type == "Geographic Distribution":
+            if 'phone' in df.columns:
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    # Use cached function for area code analysis
+                    area_counts = get_area_code_stats(df)
                     
-                    if df[selected_column].value_counts().shape[0] > 0:
-                        most_common = str(df[selected_column].value_counts().index[0])
-                        freq_most_common = int(df[selected_column].value_counts().iloc[0])
-                    
-                    stats = pd.DataFrame({
-                        'Statistic': ['Count', 'Null Count', 'Unique Values', 'Most Common', 'Frequency of Most Common'],
-                        'Value': [
-                            df[selected_column].count(),
-                            df[selected_column].isna().sum(),
-                            df[selected_column].nunique(),
-                            most_common if most_common else "N/A",
-                            freq_most_common
-                        ]
+                    fig = px.bar(
+                        x=area_counts.index,
+                        y=area_counts.values,
+                        title="Top 10 Area Codes Distribution",
+                        labels={'x': 'Area Code', 'y': 'Number of Users'}
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    # Display area code statistics
+                    st.subheader("Area Code Statistics")
+                    stats_df = pd.DataFrame({
+                        'Area Code': area_counts.index,
+                        'Count': area_counts.values,
+                        'Percentage (%)': (area_counts.values / len(df) * 100).round(2)
                     })
-                except Exception as e:
-                    st.warning(f"Error calculating statistics: {str(e)}")
-                    stats = pd.DataFrame({
-                        'Statistic': ['Count', 'Null Count', 'Unique Values'],
-                        'Value': [
-                            df[selected_column].count(),
-                            df[selected_column].isna().sum(),
-                            df[selected_column].nunique()
-                        ]
-                    })
-            
-            st.dataframe(stats, use_container_width=True, hide_index=True)
+                    st.dataframe(stats_df, use_container_width=True)
+            else:
+                st.warning("No phone number column found in the dataset")
+                
+        elif demo_type == "Email Analysis":
+            if 'email' in df.columns:
+                # Use cached function for email domain analysis
+                domain_counts = get_email_domain_stats(df)
+                
+                fig = px.pie(
+                    values=domain_counts.values,
+                    names=domain_counts.index,
+                    title="Top 10 Email Providers"
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.warning("No email column found in the dataset")
+
+    # =============== PATTERNS TAB ===============
+    with main_tabs[3]:
+        st.subheader("Data Patterns Analysis")
         
-        with col2:
-            # Column visualization
-            st.subheader(f"Distribution of '{selected_column}'")
+        pattern_type = st.selectbox(
+            "Select Pattern Analysis",
+            ["Name Analysis", "User ID Patterns", "Birth Date Patterns"]
+        )
+        
+        if pattern_type == "Name Analysis":
+            col1, col2 = st.columns(2)
             
-            if pd.api.types.is_numeric_dtype(df[selected_column]):
-                try:
-                    # Histogram for numeric data
+            # First name analysis
+            if 'first_name' in df.columns:
+                with col1:
+                    df['first_name_length'] = df['first_name'].str.len()
+                    fig = px.histogram(
+                        df,
+                        x='first_name_length',
+                        title="First Name Length Distribution"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+            
+            # Last name analysis
+            if 'last_name' in df.columns:
+                with col2:
+                    df['last_name_length'] = df['last_name'].str.len()
+                    fig = px.histogram(
+                        df,
+                        x='last_name_length',
+                        title="Last Name Length Distribution"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                    
+            if 'first_name' not in df.columns and 'last_name' not in df.columns:
+                st.warning("No name columns found in the dataset")
+                
+        elif pattern_type == "User ID Patterns":
+            if 'user_id' in df.columns:
+                # Analyze user ID patterns
+                df['id_length'] = df['user_id'].astype(str).str.len()
+                df['id_prefix'] = df['user_id'].astype(str).str[:2]
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    # ID length distribution
+                    fig = px.histogram(
+                        df,
+                        x='id_length',
+                        title="User ID Length Distribution"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    # Common ID prefixes
+                    prefix_counts = df['id_prefix'].value_counts().head(10)
+                    fig = px.bar(
+                        x=prefix_counts.index,
+                        y=prefix_counts.values,
+                        title="Common User ID Prefixes"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.warning("No user ID column found in the dataset")
+                
+        elif pattern_type == "Birth Date Patterns":
+            if 'birth_date' in df.columns or 'date_of_birth' in df.columns or 'Date of birth' in df.columns:
+                birth_date_col = 'birth_date' if 'birth_date' in df.columns else ('date_of_birth' if 'date_of_birth' in df.columns else 'Date of birth')
+                df['birth_date_parsed'] = pd.to_datetime(df[birth_date_col])
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    # Month distribution
+                    month_dist = df['birth_date_parsed'].dt.month.value_counts().sort_index()
+                    fig = px.bar(
+                        x=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        y=month_dist.values,
+                        title="Birth Month Distribution"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    # Day of week distribution
+                    day_dist = df['birth_date_parsed'].dt.day_name().value_counts()
+                    fig = px.bar(
+                        x=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+                           'Friday', 'Saturday', 'Sunday'],
+                        y=[day_dist.get(day, 0) for day in 
+                           ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+                            'Friday', 'Saturday', 'Sunday']],
+                        title="Birth Day of Week Distribution"
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.warning("No birth date column found in the dataset")
+
+    # =============== COLUMN ANALYSIS TAB ===============
+    with main_tabs[4]:
+        st.subheader("Column Analysis")
+
+        # Column selector
+        selected_column = st.selectbox(
+            "Select Column for Analysis",
+            df.columns.tolist()
+        )
+
+        if selected_column:
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.subheader("Column Statistics")
+                stats = {
+                    "Type": str(df[selected_column].dtype),
+                    "Unique Values": df[selected_column].nunique(),
+                    "Missing Values": df[selected_column].isna().sum(),
+                    "Missing %": f"{(df[selected_column].isna().sum() / len(df)) * 100:.2f}%"
+                }
+
+                for stat, value in stats.items():
+                    st.metric(stat, value)
+
+            with col2:
+                st.subheader("Value Distribution")
+                if df[selected_column].dtype in ['int64', 'float64']:
                     fig = px.histogram(
                         df,
                         x=selected_column,
-                        nbins=30,
-                        color_discrete_sequence=['#3366CC']
-                    )
-                    fig.update_layout(
-                        xaxis_title=selected_column,
-                        yaxis_title="Frequency",
-                        showlegend=False,
-                        margin=dict(l=40, r=40, t=40, b=40),
-                        height=300
+                        title=f"Distribution of {selected_column}"
                     )
                     st.plotly_chart(fig, use_container_width=True)
-                    
-                    # Box plot
-                    fig = px.box(
-                        df,
-                        y=selected_column,
-                        color_discrete_sequence=['#3366CC']
-                    )
-                    fig.update_layout(
-                        yaxis_title=selected_column,
-                        showlegend=False,
-                        margin=dict(l=40, r=40, t=40, b=40),
-                        height=300
-                    )
-                    st.plotly_chart(fig, use_container_width=True)
-                except Exception as e:
-                    st.warning(f"Could not create visualizations: {str(e)}")
-                
-            else:
-                try:
-                    # Bar chart for categorical data
-                    # Convert to string to ensure compatibility
-                    temp_col = df[selected_column].astype(str)
-                    value_counts = temp_col.value_counts().reset_index()
-                    value_counts.columns = [selected_column, 'Count']
-                    value_counts = value_counts.sort_values('Count', ascending=False).head(20)
-                    
+                else:
+                    value_counts = df[selected_column].value_counts().head(10)
                     fig = px.bar(
-                        value_counts,
-                        x=selected_column,
-                        y='Count',
-                        color_discrete_sequence=['#3366CC']
+                        x=value_counts.index,
+                        y=value_counts.values,
+                        title=f"Top 10 Values in {selected_column}"
                     )
-                    fig.update_layout(
-                        xaxis_title=selected_column,
-                        yaxis_title="Count",
-                        showlegend=False,
-                        margin=dict(l=40, r=40, t=40, b=40),
-                        height=400
-                    )
-                    
-                    # Rotate x-axis labels if there are many categories
-                    if len(value_counts) > 5:
-                        fig.update_layout(xaxis_tickangle=-45)
-                    
                     st.plotly_chart(fig, use_container_width=True)
-                except Exception as e:
-                    st.warning(f"Could not create visualization: {str(e)}")
-                    st.write("Top values:")
-                    top_values = df[selected_column].value_counts().head(10)
-                    st.dataframe(top_values)
-
-    # =============== VISUALIZATIONS TAB ===============
-    with main_tabs[2]:
-        st.subheader("Data Visualizations")
-        
-        # Get numeric columns for plotting
-        try:
-            numeric_columns = df.select_dtypes(include=['number']).columns.tolist()
-        except Exception as e:
-            # Fallback: manually check each column
-            numeric_columns = []
-            for col in df.columns:
-                try:
-                    if pd.to_numeric(df[col], errors='coerce').notna().all():
-                        numeric_columns.append(col)
-                except:
-                    pass
-        
-        if len(numeric_columns) < 2:
-            st.warning("Not enough numeric columns for creating visualizations. The dashboard found these numeric columns: " + 
-                      (", ".join(numeric_columns) if numeric_columns else "None"))
-        else:
-            viz_type = st.radio(
-                "Select visualization type",
-                options=["Scatter Plot", "Line Chart", "Correlation Heatmap", "Pair Plot"],
-                horizontal=True
-            )
-            
-            if viz_type == "Scatter Plot":
-                col1, col2 = st.columns([1, 1])
-                
-                with col1:
-                    x_axis = st.selectbox("Select X-axis", options=numeric_columns, index=0)
-                
-                with col2:
-                    y_axis = st.selectbox("Select Y-axis", options=numeric_columns, index=min(1, len(numeric_columns)-1))
-                
-                # Add color selection if there are categorical columns
-                try:
-                    categorical_cols = df.select_dtypes(include=['object', 'category']).columns.tolist()
-                except:
-                    # Fallback: use columns with low number of unique values
-                    categorical_cols = [col for col in df.columns if col not in numeric_columns and df[col].nunique() < 20]
-                
-                color_col = None
-                if categorical_cols:
-                    color_col = st.selectbox(
-                        "Color points by (optional)",
-                        options=['None'] + categorical_cols,
-                        index=0
-                    )
-                    if color_col == 'None':
-                        color_col = None
-                
-                try:
-                    # Create scatter plot
-                    fig = px.scatter(
-                        df.sample(min(5000, len(df))),  # Sample to avoid overcrowding
-                        x=x_axis,
-                        y=y_axis,
-                        color=color_col,
-                        trendline="ols",
-                        labels={x_axis: x_axis, y_axis: y_axis},
-                        title=f"{y_axis} vs {x_axis}"
-                    )
-                    fig.update_layout(height=600)
-                    st.plotly_chart(fig, use_container_width=True)
-                    
-                    # Calculate correlation
-                    corr = df[x_axis].corr(df[y_axis])
-                    st.metric("Correlation Coefficient", f"{corr:.4f}")
-                except Exception as e:
-                    st.warning(f"Could not create scatter plot: {str(e)}")
-                    st.write("Please try different columns or visualization types.")
-            
-            elif viz_type == "Line Chart":
-                try:
-                    x_axis = st.selectbox("Select X-axis", options=numeric_columns, index=0)
-                    y_columns = st.multiselect(
-                        "Select Y-axis variable(s)",
-                        options=[col for col in numeric_columns if col != x_axis],
-                        default=[numeric_columns[min(1, len(numeric_columns)-1)]]
-                    )
-                    
-                    if y_columns:
-                        # Sort data by x-axis for connected lines
-                        chart_data = df.sort_values(by=x_axis)
-                        
-                        # Create line chart
-                        fig = go.Figure()
-                        
-                        for y_col in y_columns:
-                            fig.add_trace(go.Scatter(
-                                x=chart_data[x_axis],
-                                y=chart_data[y_col],
-                                mode='lines',
-                                name=y_col
-                            ))
-                        
-                        fig.update_layout(
-                            xaxis_title=x_axis,
-                            yaxis_title="Value",
-                            legend_title="Variables",
-                            height=500
-                        )
-                        st.plotly_chart(fig, use_container_width=True)
-                    else:
-                        st.warning("Please select at least one Y-axis variable")
-                except Exception as e:
-                    st.warning(f"Could not create line chart: {str(e)}")
-                    st.write("Please try different columns or visualization types.")
-            
-            elif viz_type == "Correlation Heatmap":
-                try:
-                    # Limit to top 15 numeric columns if there are many
-                    if len(numeric_columns) > 15:
-                        st.info("Showing correlation for the first 15 numeric columns only.")
-                        corr_columns = numeric_columns[:15]
-                    else:
-                        corr_columns = numeric_columns
-                    
-                    # Calculate correlation matrix
-                    corr_matrix = df[corr_columns].corr()
-                    
-                    # Create heatmap
-                    fig = px.imshow(
-                        corr_matrix,
-                        text_auto='.2f',
-                        color_continuous_scale='RdBu_r',
-                        aspect="auto",
-                        title="Correlation Matrix"
-                    )
-                    fig.update_layout(height=600)
-                    st.plotly_chart(fig, use_container_width=True)
-                    
-                    # Highlight strongest correlations
-                    corr_pairs = corr_matrix.unstack().sort_values(ascending=False)
-                    # Remove self-correlations
-                    corr_pairs = corr_pairs[corr_pairs < 0.999]
-                    
-                    if not corr_pairs.empty:
-                        st.subheader("Strongest Correlations")
-                        top_corrs = pd.DataFrame({
-                            'Variables': [f"{i[0]} & {i[1]}" for i in corr_pairs.index[:5]],
-                            'Correlation': corr_pairs.values[:5]
-                        })
-                        st.dataframe(top_corrs, use_container_width=True, hide_index=True)
-                except Exception as e:
-                    st.warning(f"Could not create correlation heatmap: {str(e)}")
-                    st.write("Please try different columns or visualization types.")
-            
-            elif viz_type == "Pair Plot":
-                try:
-                    # Let user select a subset of columns (max 5 for readability)
-                    selected_cols = st.multiselect(
-                        "Select columns to include (max 5 recommended)",
-                        options=numeric_columns,
-                        default=numeric_columns[:min(3, len(numeric_columns))]
-                    )
-                    
-                    if len(selected_cols) < 2:
-                        st.warning("Please select at least 2 columns")
-                    elif len(selected_cols) > 5:
-                        st.warning("Too many columns selected. Limiting to first 5 for readability.")
-                        selected_cols = selected_cols[:5]
-                    
-                    if len(selected_cols) >= 2:
-                        # Create scatter plot matrix
-                        fig = px.scatter_matrix(
-                            df,
-                            dimensions=selected_cols,
-                            color_discrete_sequence=px.colors.qualitative.Set2
-                        )
-                        fig.update_layout(height=700)
-                        st.plotly_chart(fig, use_container_width=True)
-                except Exception as e:
-                    st.warning(f"Could not create pair plot: {str(e)}")
-                    st.write("Please try different columns or visualization types.")
-
     # =============== DATA EXPLORER TAB ===============
     with main_tabs[3]:
         st.subheader("Data Explorer")
@@ -504,9 +531,9 @@ try:
         
         with col1:
             # Filter controls
-            st.subheader("Filter Data")
+            st.subheader("Search & Filter")
             
-            with st.expander("Search & Filter", expanded=True):
+            with st.expander("Filter Options", expanded=True):
                 # Text search
                 search_col = st.selectbox(
                     "Search in column",
@@ -515,189 +542,118 @@ try:
                 
                 search_text = st.text_input("Search text (case-insensitive)")
                 
-                try:
-                    if search_text and search_col != 'All Columns':
-                        # Filter for the specific column
-                        if pd.api.types.is_string_dtype(df[search_col]):
-                            filtered_df = df[df[search_col].str.contains(search_text, case=False, na=False)]
-                        else:
-                            # Convert column to string for searching
-                            filtered_df = df[df[search_col].astype(str).str.contains(search_text, case=False, na=False)]
-                    elif search_text:
-                        # Search across all columns
-                        mask = pd.Series(False, index=df.index)
-                        for col in df.columns:
-                            try:
-                                mask = mask | df[col].astype(str).str.contains(search_text, case=False, na=False)
-                            except:
-                                # Skip columns that can't be converted to string
-                                pass
-                        filtered_df = df[mask]
-                    else:
-                        filtered_df = df
-                except Exception as e:
-                    st.warning(f"Search error: {str(e)}")
+                if search_text and search_col != 'All Columns':
+                    # Filter for specific column
+                    mask = df[search_col].astype(str).str.contains(search_text, case=False, na=False)
+                    filtered_df = df[mask]
+                elif search_text:
+                    # Search across all columns
+                    mask = pd.Series(False, index=df.index)
+                    for col in df.columns:
+                        mask |= df[col].astype(str).str.contains(search_text, case=False, na=False)
+                    filtered_df = df[mask]
+                else:
                     filtered_df = df
                 
-                # Add numeric range filters for selected columns
-                numeric_cols_for_filter = st.multiselect(
+                # Numeric range filters
+                numeric_filters = st.multiselect(
                     "Add numeric filters",
                     options=numeric_columns
                 )
                 
-                for col in numeric_cols_for_filter:
-                    try:
-                        min_val = float(filtered_df[col].min())
-                        max_val = float(filtered_df[col].max())
-                        
-                        # Only show filter if we have a range of values
-                        if min_val < max_val:
-                            filter_range = st.slider(
-                                f"Filter by {col}",
-                                min_value=min_val,
-                                max_value=max_val,
-                                value=(min_val, max_val),
-                                step=(max_val - min_val) / 100
-                            )
-                            
-                            filtered_df = filtered_df[(filtered_df[col] >= filter_range[0]) & 
-                                                    (filtered_df[col] <= filter_range[1])]
-                    except Exception as e:
-                        st.warning(f"Could not create filter for {col}: {str(e)}")
+                for col in numeric_filters:
+                    min_val, max_val = float(filtered_df[col].min()), float(filtered_df[col].max())
+                    if min_val < max_val:
+                        range_vals = st.slider(
+                            f"Filter {col}",
+                            min_value=min_val,
+                            max_value=max_val,
+                            value=(min_val, max_val)
+                        )
+                        filtered_df = filtered_df[
+                            (filtered_df[col] >= range_vals[0]) & 
+                            (filtered_df[col] <= range_vals[1])
+                        ]
                 
-                # Show number of filtered results
                 st.info(f"Showing {len(filtered_df):,} of {len(df):,} records")
         
         with col2:
             # Display filtered data
             st.subheader("Filtered Data")
-            st.dataframe(filtered_df.head(100), use_container_width=True)
+            st.dataframe(filtered_df, use_container_width=True)
             
-            # Show download button
             if not filtered_df.empty:
                 csv = filtered_df.to_csv(index=False).encode('utf-8')
-                
                 st.download_button(
-                    label="Download filtered data as CSV",
+                    "Download Filtered Data",
                     data=csv,
                     file_name=f"filtered_{selected_file}",
-                    mime="text/csv",
+                    mime="text/csv"
                 )
 
     # =============== DATA QUALITY TAB ===============
     with main_tabs[4]:
         st.subheader("Data Quality Assessment")
         
-        # Data quality metrics
-        try:
-            total_cells = df.size
-            missing_cells = df.isna().sum().sum()
-            missing_pct = (missing_cells / total_cells) * 100 if total_cells > 0 else 0
-            duplicate_rows = df.duplicated().sum()
-            duplicate_pct = (duplicate_rows / len(df)) * 100 if len(df) > 0 else 0
+        # Overall quality metrics
+        total_cells = df.size
+        missing_cells = df.isna().sum().sum()
+        missing_pct = (missing_cells / total_cells) * 100
+        duplicate_rows = df.duplicated().sum()
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            metric_card("Completeness", f"{100 - missing_pct:.1f}", suffix="%")
+        with col2:
+            metric_card("Missing Values", missing_cells, f"{missing_pct:.1f}%")
+        with col3:
+            metric_card("Duplicate Rows", duplicate_rows, f"{(duplicate_rows/len(df))*100:.1f}%")
+        
+        # Column quality analysis
+        st.subheader("Column Quality Analysis")
+        
+        quality_data = []
+        for col in df.columns:
+            missing = df[col].isna().sum()
+            unique_count = df[col].nunique()
             
-            col1, col2, col3 = st.columns(3)
-            
-            with col1:
-                metric_card("Data Completeness", f"{100 - missing_pct:.2f}", suffix="%")
-            with col2:
-                metric_card("Missing Values", f"{missing_cells:,}", f"{missing_pct:.2f}%")
-            with col3:
-                metric_card("Duplicate Rows", f"{duplicate_rows:,}", f"{duplicate_pct:.2f}%")
-            
-            # Column quality analysis
-            st.subheader("Column Quality Analysis")
-            
-            # Handle potential data type issues safely
-            quality_data = []
-            for col in df.columns:
-                try:
-                    missing = df[col].isna().sum()
-                    missing_pct = (missing / len(df)) * 100 if len(df) > 0 else 0
-                    unique_values = df[col].nunique()
-                    unique_pct = (unique_values / len(df)) * 100 if len(df) > 0 else 0
-                    
-                    # Safely get sample values
-                    try:
-                        non_na_values = df[col].dropna()
-                        if len(non_na_values) > 0:
-                            samples = non_na_values.sample(min(3, len(non_na_values))).tolist()
-                            sample_str = ", ".join(str(x) for x in samples)
-                        else:
-                            sample_str = "No non-null values"
-                    except:
-                        sample_str = "Cannot display samples"
-                    
-                    quality_data.append({
-                        'Column': col,
-                        'Type': str(df[col].dtype),
-                        'Missing Values': missing,
-                        'Missing %': missing_pct,
-                        'Unique Values': unique_values,
-                        'Unique %': unique_pct,
-                        'Sample Values': sample_str
-                    })
-                except Exception as e:
-                    # Fallback for problematic columns
-                    quality_data.append({
-                        'Column': col,
-                        'Type': str(df[col].dtype),
-                        'Missing Values': "Error",
-                        'Missing %': "Error",
-                        'Unique Values': "Error",
-                        'Unique %': "Error",
-                        'Sample Values': f"Error: {str(e)}"
-                    })
-            
-            quality_df = pd.DataFrame(quality_data)
-            st.dataframe(quality_df, use_container_width=True, hide_index=True)
-            
-            # Completeness visualization
-            st.subheader("Data Completeness by Column")
-            
-            try:
-                # Filter to only include rows with valid numeric data
-                valid_quality_rows = [row for row in quality_data 
-                                    if isinstance(row['Missing %'], (int, float))]
-                
-                if valid_quality_rows:
-                    completeness_data = pd.DataFrame(valid_quality_rows)
-                    completeness_data['Completeness %'] = 100 - completeness_data['Missing %']
-                    completeness_data = completeness_data.sort_values('Completeness %')
-                    
-                    fig = px.bar(
-                        completeness_data,
-                        y='Column',
-                        x='Completeness %',
-                        color='Completeness %',
-                        color_continuous_scale='RdYlGn',
-                        range_color=[0, 100],
-                        labels={'Column': '', 'Completeness %': 'Completeness (%)'},
-                        title="Data Completeness by Column"
-                    )
-                    fig.update_layout(height=max(300, 30 * len(completeness_data)))
-                    st.plotly_chart(fig, use_container_width=True)
-                else:
-                    st.warning("Could not generate completeness visualization due to data issues.")
-            except Exception as e:
-                st.warning(f"Could not create completeness chart: {str(e)}")
-        except Exception as e:
-            st.error(f"Error in data quality analysis: {str(e)}")
+            quality_data.append({
+                'Column': col,
+                'Type': str(df[col].dtype),
+                'Missing Values': missing,
+                'Missing %': f"{(missing/len(df))*100:.1f}%",
+                'Unique Values': unique_count,
+                'Unique %': f"{(unique_count/len(df))*100:.1f}%",
+                'Sample Values': ', '.join(map(str, df[col].dropna().head(3)))
+            })
+        
+        quality_df = pd.DataFrame(quality_data)
+        st.dataframe(quality_df, use_container_width=True)
+        
+        # Completeness visualization
+        st.subheader("Data Completeness by Column")
+        completeness_data = pd.DataFrame({
+            'Column': df.columns,
+            'Completeness': [100 - (df[col].isna().sum() / len(df) * 100) for col in df.columns]
+        }).sort_values('Completeness')
+        
+        fig = px.bar(
+            completeness_data,
+            x='Completeness',
+            y='Column',
+            orientation='h',
+            title="Column Completeness (%)",
+            color='Completeness',
+            color_continuous_scale='RdYlGn'
+        )
+        st.plotly_chart(fig, use_container_width=True)
 
 except Exception as e:
-    st.error(f"Error loading or processing the file: {str(e)}")
-    st.error(f"Error details: {type(e).__name__}")
-    
-    # Display available file paths
-    st.subheader("Available Files")
-    st.write("Raw files:")
-    st.write("\n".join(raw_files) if raw_files else "No raw files found.")
-    st.write("Processed files:")
-    st.write("\n".join(processed_files) if processed_files else "No processed files found.")
+    st.error(f"Error loading or processing file: {str(e)}")
+    st.stop()
 
-# Footer with timestamp
+# Footer
 st.sidebar.markdown("---")
 st.sidebar.info(
-    f"Dashboard generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-    f"User: SefanosOk"
+    f"Dashboard updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 )
